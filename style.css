@@ -1,42 +1,100 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background: #f4f4f9;
+    color: #333;
 }
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header */
 header {
-    background: #2c3e50;
+    background: url('https://images.unsplash.com/photo-1549887534-3c3a4a3fe1b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
     color: white;
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
 }
+
+header h1 {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+header p {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 16px;
+    border-radius: 6px;
+}
+
+/* Main Section */
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 30px 10px;
 }
+
+/* Book Cards */
 .book {
     background: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
+    border-radius: 10px;
+    margin: 15px;
     padding: 15px;
-    max-width: 200px;
+    max-width: 220px;
     text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
+.book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
 .book img {
     max-width: 100%;
     height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
 }
+
+.book h3 {
+    font-size: 1.1em;
+    margin: 0 0 5px;
+}
+
+.book p {
+    margin: 4px 0;
+    font-size: 0.95em;
+}
+
 .book a {
-    display: block;
+    display: inline-block;
     margin-top: 10px;
     color: #2980b9;
     text-decoration: none;
+    font-weight: bold;
 }
+
+.book a i {
+    margin-right: 6px;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background: #ecf0f1;
+    font-size: 0.9em;
+    color: #555;
 }
