@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chumash | Jewish Books Store</title>
 
-  <!-- Fonts and Icons -->
+  <!-- Google Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -45,7 +45,7 @@
         const bookList = document.getElementById('book-list');
         const filteredBooks = data.books.filter(book => book.category.toLowerCase() === "chumash");
 
-        chumashBooks.forEach(book => {
+        filteredBooks.forEach(book => {
           const bookItem = document.createElement('div');
           bookItem.className = 'book';
           bookItem.innerHTML = `
@@ -67,4 +67,3 @@
 
 </body>
 </html>
-
