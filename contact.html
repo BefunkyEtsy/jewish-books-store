@@ -70,13 +70,20 @@
     <h2>Reach Out</h2>
     <p>You can email us directly at <a href="mailto:hello@jewishbooks.store">hello@jewishbooks.store</a> or use the form below:</p>
 
-    <!-- Optional: Use Formspree or similar free service -->
-   <form action="https://formspree.io/f/movdbeyg" method="POST">
+    <form action="https://formspree.io/f/movdbeyg" method="POST">
   <input type="text" name="name" placeholder="Your Name" required />
   <input type="email" name="_replyto" placeholder="Your Email" required />
   <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  <!-- Anti-spam honeypot (bots fill this, humans won't) -->
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <!-- Redirect to a thank-you page after submission -->
+  <input type="hidden" name="_redirect" value="https://befunkyetsy.github.io/jewish-books-store/contact-thanks.html" />
+
   <button type="submit">Send Message</button>
 </form>
+
 
 
     <p><small>We usually respond within 24–48 hours, except on Shabbat and Yom Tov.</small></p>
