@@ -43,7 +43,7 @@
       .then(response => response.json())
       .then(data => {
         const bookList = document.getElementById('book-list');
-        const chumashBooks = data.books.filter(book => book.category.toLowerCase() === "chumash");
+        const filteredBooks = data.books.filter(book => book.category.toLowerCase() === "chumash");
 
         chumashBooks.forEach(book => {
           const bookItem = document.createElement('div');
