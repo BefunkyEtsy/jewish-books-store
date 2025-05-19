@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Jewish Books Store</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .contact-content {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .contact-content h2 {
+      color: #2a4b7c;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .contact-content p {
+      margin-bottom: 20px;
+    }
+    .contact-content form input,
+    .contact-content form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    .contact-content form button {
+      background: #2a4b7c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="/jewish-books-store/index.html">Home</a></li>
+      <li><a href="/jewish-books-store/categories/chumash.html">Chumash</a></li>
+      <li><a href="/jewish-books-store/categories/talmud.html">Talmud</a></li>
+      <li><a href="/jewish-books-store/categories/prayer-books.html">Siddurim</a></li>
+      <li><a href="/jewish-books-store/blog/top-10-artscroll.html">Top 10</a></li>
+      <li><a href="/jewish-books-store/about.html">About</a></li>
+      <li><a href="/jewish-books-store/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you — questions, feedback, or book suggestions!</p>
+  </header>
+
+  <section class="contact-content">
+    <h2>Reach Out</h2>
+    <p>You can email us directly at <a href="mailto:hello@jewishbooks.store">hello@jewishbooks.store</a> or use the form below:</p>
+
+    <!-- Optional: Use Formspree or similar free service -->
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p><small>We usually respond within 24–48 hours, except on Shabbat and Yom Tov.</small></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Jewish Books Store | Let's stay connected</p>
+  </footer>
+
+</body>
+</html>
