@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prayer Books | Jewish Books Store</title>
+
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="/jewish-books-store/index.html">Home</a></li>
+      <li><a href="/jewish-books-store/categories/chumash.html">Chumash</a></li>
+      <li><a href="/jewish-books-store/categories/talmud.html">Talmud</a></li>
+      <li><a href="/jewish-books-store/categories/prayer-books.html">Siddurim</a></li>
+      <li><a href="/jewish-books-store/blog/top-10-artscroll.html">Top 10</a></li>
+      <li><a href="/jewish-books-store/about.html">About</a></li>
+      <li><a href="/jewish-books-store/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Prayer Books (Siddurim)</h1>
+    <p>Explore ArtScroll's bestselling Siddurim and guides to prayer</p>
+  </header>
+
+  <main id="book-list"></main>
+
+  <footer>
+    <p>© 2025 Jewish Books Store | Powered by GitHub Pages</p>
+  </footer>
+
+  <script>
+    // Load books and filter by Siddur category
+    fetch('../books.json')
+      .then(response => response.json())
+      .then(data => {
+        const bookList = document.getElementById('book-list');
+        const filteredBooks = data.books.filter(book => book.category.toLowerCase() === "siddur");
+
+        filteredBooks.forEach(book => {
+          const bookItem = document.createElement('div');
+          bookItem.className = 'book';
+          bookItem.innerHTML = `
+            <img src="../${book.image}" alt="${book.title}">
+            <h3>${book.title}</h3>
+            <p>${book.author}</p>
+            <p><em>${book.category}</em></p>
+            <a href="${book.link}" target="_blank">
+              <i class="fa-brands fa-amazon"></i> View on Amazon
+            </a>
+          `;
+          bookList.appendChild(bookItem);
+        });
+      })
+      .catch(error => {
+        console.error("Error loading books:", error);
+      });
+  </script>
+
+</body>
+</html>
