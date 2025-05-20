@@ -80,9 +80,15 @@
     <p><small>We usually respond within 1–2 business days, excluding Shabbat and Yom Tov.</small></p>
   </section>
 
-  <footer>
-    <p>© 2025 Jewish Books Store | Thank you for reaching out</p>
-  </footer>
+<footer id="main-footer"></footer>
+<script>
+  fetch("/jewish-books-store/partials/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("main-footer").innerHTML = data;
+    });
+</script>
+
 
 </body>
 </html>
