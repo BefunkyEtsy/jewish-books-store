@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jewish Books Store</title>
-
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
@@ -23,10 +21,35 @@
 
   <header>
     <h1>Welcome to the Jewish Books Store</h1>
-    <p>Explore the most trusted and inspiring Jewish books from ArtScroll and beyond</p>
+    <p>Explore top Jewish books by category, selected for quality and popularity</p>
   </header>
 
-  <main id="book-list"></main>
+  <main>
+    <section>
+      <h2>Chumash</h2>
+      <div class="category-row" id="chumash-books"></div>
+    </section>
+
+    <section>
+      <h2>Talmud</h2>
+      <div class="category-row" id="talmud-books"></div>
+    </section>
+
+    <section>
+      <h2>Siddurim</h2>
+      <div class="category-row" id="siddurim-books"></div>
+    </section>
+
+    <section>
+      <h2>Tanach</h2>
+      <div class="category-row" id="tanach-books"></div>
+    </section>
+
+    <section>
+      <h2>Tehillim</h2>
+      <div class="category-row" id="tehillim-books"></div>
+    </section>
+  </main>
 
   <footer id="main-footer"></footer>
   <script>
@@ -41,22 +64,35 @@
     fetch('books.json')
       .then(response => response.json())
       .then(data => {
-        const bookList = document.getElementById('book-list');
-        const featuredBooks = data.books.filter(book => book.featured === true);
+        const categories = {
+          chumash: "Chumash",
+          talmud: "Talmud",
+          siddurim: "Siddur",
+          tanach: "Tanach",
+          tehillim: "Tehillim"
+        };
 
-        featuredBooks.forEach(book => {
-          const bookItem = document.createElement('div');
-          bookItem.className = 'book';
-          bookItem.innerHTML = `
-            <img src="${book.image}" alt="${book.title}">
-            <h3>${book.title}</h3>
-            <p>${book.author}</p>
-            <a href="${book.link}" target="_blank">
-              <i class="fa-brands fa-amazon"></i> View on Amazon
-            </a>
-          `;
-          bookList.appendChild(bookItem);
-        });
+        for (let key in categories) {
+          const container = document.getElementById(`${key}-books`);
+          const books = data.books.filter(book =>
+            book.category.toLowerCase() === categories[key].toLowerCase() &&
+            book.featured === true
+          ).slice(0, 4);
+
+          books.forEach(book => {
+            const item = document.createElement('div');
+            item.className = 'book';
+            item.innerHTML = `
+              <img src="${book.image}" alt="${book.title}">
+              <h3>${book.title}</h3>
+              <p>${book.author}</p>
+              <a href="${book.link}" target="_blank">
+                <i class="fa-brands fa-amazon"></i> View on Amazon
+              </a>
+            `;
+            container.appendChild(item);
+          });
+        }
       })
       .catch(error => {
         console.error("Error loading books:", error);
