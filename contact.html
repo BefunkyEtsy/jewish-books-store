@@ -69,29 +69,30 @@
   <section class="contact-content">
     <h2>Send a Message</h2>
     <form action="https://formsubmit.io/send/jeseraimonpatron@gmail.com" method="POST">
-      <!-- Redirect after submission -->
+      <!-- Redirect to thank-you page -->
       <input type="hidden" name="_redirect" value="https://befunkyetsy.github.io/jewish-books-store/contact-thanks.html">
 
-      <!-- Auto-reply message -->
-      <input type="hidden" name="_autoresponse" value="Thank you for contacting Jewish Books Store! We've received your message and will respond soon.">
+      <!-- Autoresponder message -->
+      <input type="hidden" name="_autoresponse" value="Thank you for contacting Jewish Books Store! We’ve received your message and will reply shortly.">
 
-      <!-- Optional template styling -->
+      <!-- Optional template formatting -->
       <input type="hidden" name="_template" value="box">
 
-      <!-- Honeypot spam trap -->
+      <!-- Spam honeypot (invisible field) -->
       <input type="text" name="_formsubmit_id" style="display:none">
 
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
 
-    <p><small>We usually respond within 1–2 business days, except Shabbat and holidays.</small></p>
+    <p><small>We usually respond within 1–2 business days, excluding Shabbat and Yom Tov.</small></p>
   </section>
 
   <footer>
-    <p>© 2025 Jewish Books Store | Thank you for reaching out!</p>
+    <p>© 2025 Jewish Books Store | Thank you for reaching out</p>
   </footer>
 
 </body>
