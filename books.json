@@ -1,32 +1,42 @@
 {
   "books": [
     {
-      "title": "The Chumash: The Stone Edition",
-      "author": "Artscroll",
+      "title": "Sapirstein Edition Rashi Chumash (5-Volume Set)",
+      "author": "ArtScroll",
       "category": "Chumash",
-      "image": "images/9780899060149.jpg",
-      "link": "https://www.amazon.com/dp/0899060145?tag=naphtoli-20"
+      "link": "https://www.amazon.com/Sapirstein-Rashi-Commentary-Translated-Deuteronomy/dp/1578191149?tag=naphtoli-20",
+      "image": "images/sapirstein-chumash.jpg",
+      "featured": true
     },
     {
-      "title": "Talmud Bavli: The Gemara, Schottenstein Daf Yomi Edition - Tractate Berachos, Vol. 1",
+      "title": "Schottenstein Edition Talmud Bavli (73-Volume Compact Set)",
       "author": "ArtScroll",
       "category": "Talmud",
-      "image": "images/tbr1.jpg",
-      "link": "https://www.amazon.com/Talmud-Bavli-Schottenstein-Tractate-Berachos/dp/1578196000/ref=sr_1_1?crid=1UYI4GOLG27CA&dib=eyJ2IjoiMSJ9.eG34V8p2muyoLdhu905xJ-t56YtEM0JdnfwKsECZW8RpcuzLITv1ebPM2hy3DQRyP6GpIhY_5nbtus-9iLvcV0QAcCtogz2sxT0z2fkA92Onwk83w5Po6LbJ9VF1549VbskmLdGpuaiSVEfVzJih1_82rXJCtxjqFv-B5DWDHqYmuj9ooARUgVn7nNtEbsVS3mAeLL8VqLwkZwbv3iX7YmuXGe-3oprEt8W9hcMbPa4.vKreoWTuL-mWsyiVQIhMZoGrCKnHRwgsAmhJkGS48kY&dib_tag=se&keywords=artscroll+talmud+berachos&qid=1747666922&sprefix=talmud+artscroll+talmud+berac%2Caps%2C227&sr=8-1?tag=naphtoli-20"
+      "link": "https://www.amazon.com/Schottenstein-Daf-Yomi-Talmud-Set/dp/1578190681?tag=naphtoli-20",
+      "image": "images/schottenstein-talmud.jpg"
+    },
+    {
+      "title": "The Artscroll English Tanach: Stone Edition",
+      "author": "Nosson Scherman",
+      "category": "Tanach",
+      "link": "https://www.amazon.com/Artscroll-English-Tanach-Nosson-Scherman/dp/142261039X?tag=naphtoli-20",
+      "image": "images/stone-edition-tanach.jpg",
+      "featured": true
     },
     {
       "title": "The Complete ArtScroll Siddur",
-      "author": "Rabbi Meir Zlotowitz",
+      "author": "Nosson Scherman",
       "category": "Siddur",
-      "image": "images/sach.jpg",
-      "link": "https://www.amazon.com/Siddur-Complete-ArtScroll-3rd-Third/dp/B0085O77UY/ref=sr_1_2?crid=37YN278MVH966&dib=eyJ2IjoiMSJ9.0vq_k6PmHZQg2-qvIyOxeU5o4oEtq2pjOYVYkSYT_IM.w23igz1uYlSfTYmI5KXO8i-_Nd2zkZcjb_VO-bMcqxI&dib_tag=se&keywords=9780899066509&qid=1747668212&sprefix=9780899066509%2Caps%2C203&sr=8-2?tag=naphtoli-20"
+      "link": "https://www.amazon.com/Complete-ArtScroll-Siddur-Weekday-Festival/dp/0899066550?tag=naphtoli-20",
+      "image": "images/artscroll-siddur.jpg"
     },
     {
-  "title": "The NEW, Expanded ArtScroll Hebrew/English Siddur - Wasserman Edition Full Size Ashkenaz",
-  "author": "Rabbi Nosson Scherman",
-  "category": "Siddur",
-  "link": "https://www.amazon.com/dp/1422609685?tag=naphtoli-20",
-  "image": "images/saeh.jpg"
-}
+      "title": "The ArtScroll Tehillim (Psalms)",
+      "author": "ArtScroll",
+      "category": "Tehillim",
+      "link": "https://www.amazon.com/Tehillim-Psalms-Artscroll-Mesorah-English/dp/0899066658?tag=naphtoli-20",
+      "image": "images/artscroll-tehillim.jpg",
+      "featured": true
+    }
   ]
 }
