@@ -24,9 +24,6 @@
       font-size: 1.5em;
       margin-bottom: 10px;
     }
-    .contact-content p {
-      margin-bottom: 20px;
-    }
     .contact-content form input,
     .contact-content form textarea {
       width: 100%;
@@ -68,19 +65,7 @@
 
   <section class="contact-content">
     <h2>Send a Message</h2>
-    <form action="https://formsubmit.io/send/jeseraimonpatron@gmail.com" method="POST">
-      <!-- Redirect to thank-you page -->
-      <input type="hidden" name="_redirect" value="https://befunkyetsy.github.io/jewish-books-store/contact-thanks.html">
-
-      <!-- Autoresponder message -->
-      <input type="hidden" name="_autoresponse" value="Thank you for contacting Jewish Books Store! We’ve received your message and will reply shortly.">
-
-      <!-- Optional template formatting -->
-      <input type="hidden" name="_template" value="box">
-
-      <!-- Spam honeypot (invisible field) -->
-      <input type="text" name="_formsubmit_id" style="display:none">
-
+    <form action="https://formspree.io/f/movdbeyg" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
