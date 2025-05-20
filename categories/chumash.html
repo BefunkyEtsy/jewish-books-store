@@ -31,9 +31,15 @@
 
   <main id="book-list"></main>
 
-  <footer>
-    <p>© 2025 Jewish Books Store | Powered by GitHub Pages</p>
-  </footer>
+ <footer id="main-footer"></footer>
+<script>
+  fetch("/jewish-books-store/partials/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("main-footer").innerHTML = data;
+    });
+</script>
+
 
   <script>
     // Load books and filter by Chumash category
