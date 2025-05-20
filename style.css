@@ -99,3 +99,12 @@ footer {
     background: #eae7dc;
     color: #555;
 }
+
+.book img {
+  width: 180px;           /* or your preferred width */
+  height: 260px;          /* set to desired height */
+  object-fit: cover;      /* keeps proportions without distortion */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
