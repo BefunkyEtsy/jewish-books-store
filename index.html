@@ -34,9 +34,15 @@
 
     <main id="book-list"></main>
 
-    <footer>
-        <p>© 2025 Jewish Books Store. Inspired by Artscroll.</p>
-    </footer>
+  <footer id="main-footer"></footer>
+<script>
+  fetch("/jewish-books-store/partials/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("main-footer").innerHTML = data;
+    });
+</script>
+
 
     <script src="scripts.js"></script>
 </body>
