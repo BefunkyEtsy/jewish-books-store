@@ -95,10 +95,15 @@
     <p>Popular series on bitachon and emunah in everyday life. <br>
     <a href="https://www.amazon.com/dp/1422618359?tag=naphtoli-20" target="_blank">Buy on Amazon</a></p>
   </article>
-
-  <footer>
-    <p>© 2025 Jewish Books Store | Top 10 ArtScroll Titles</p>
-  </footer>
+  
+<footer id="main-footer"></footer>
+<script>
+  fetch("/jewish-books-store/partials/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("main-footer").innerHTML = data;
+    });
+</script>
 
 </body>
 </html>
