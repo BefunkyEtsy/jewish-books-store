@@ -18,12 +18,31 @@
 
    <nav id="main-nav"></nav>
 <script>
-  fetch("/jewish-books-store/partials/nav.html")
-    .then(response => response.text())
+  fetch('books.json')
+    .then(response => response.json())
     .then(data => {
-      document.getElementById("main-nav").innerHTML = data;
+      const bookList = document.getElementById('book-list');
+      const featuredBooks = data.books.filter(book => book.featured === true);
+
+      featuredBooks.forEach(book => {
+        const bookItem = document.createElement('div');
+        bookItem.className = 'book';
+        bookItem.innerHTML = `
+          <img src="${book.image}" alt="${book.title}">
+          <h3>${book.title}</h3>
+          <p>${book.author}</p>
+          <a href="${book.link}" target="_blank">
+            <i class="fa-brands fa-amazon"></i> View on Amazon
+          </a>
+        `;
+        bookList.appendChild(bookItem);
+      });
+    })
+    .catch(error => {
+      console.error("Error loading books:", error);
     });
 </script>
+
 
 
 
